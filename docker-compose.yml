@@ -2,7 +2,6 @@ networks:
   default:
     driver: bridge
 
-
 services:
   vacancy.db:
     container_name: vacancy.db
@@ -19,6 +18,7 @@ services:
       - vacancy.db.data:/var/lib/postgresql/data 
 
   vacancy.api:
+    image: aykhan151618/baim.ms-vacancies:latest
     container_name: vacancy.api
     build:
       context: ./Vacancy.API
